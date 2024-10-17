@@ -98,6 +98,7 @@ func NewCA() *CertificateAuthority {
 	ca := &CertificateAuthority{cert: &x509.Certificate{
 		Subject: pkix.Name{
 			Organization: []string{"Never Use this Certificate in Production Inc."},
+			CommonName:   "LOCAL_TEST",
 		},
 		SerialNumber:          big.NewInt(42),
 		NotBefore:             time.Now().Add(-1 * time.Hour),
